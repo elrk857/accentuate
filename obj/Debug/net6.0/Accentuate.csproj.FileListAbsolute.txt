@@ -1,0 +1,15 @@
+C:\Git\C#\Accentuate\bin\Debug\net6.0\Accentuate.exe
+C:\Git\C#\Accentuate\bin\Debug\net6.0\Accentuate.deps.json
+C:\Git\C#\Accentuate\bin\Debug\net6.0\Accentuate.runtimeconfig.json
+C:\Git\C#\Accentuate\bin\Debug\net6.0\Accentuate.dll
+C:\Git\C#\Accentuate\bin\Debug\net6.0\Accentuate.pdb
+C:\Git\C#\Accentuate\obj\Debug\net6.0\Accentuate.csproj.AssemblyReference.cache
+C:\Git\C#\Accentuate\obj\Debug\net6.0\Accentuate.GeneratedMSBuildEditorConfig.editorconfig
+C:\Git\C#\Accentuate\obj\Debug\net6.0\Accentuate.AssemblyInfoInputs.cache
+C:\Git\C#\Accentuate\obj\Debug\net6.0\Accentuate.AssemblyInfo.cs
+C:\Git\C#\Accentuate\obj\Debug\net6.0\Accentuate.csproj.CoreCompileInputs.cache
+C:\Git\C#\Accentuate\obj\Debug\net6.0\Accentuate.dll
+C:\Git\C#\Accentuate\obj\Debug\net6.0\refint\Accentuate.dll
+C:\Git\C#\Accentuate\obj\Debug\net6.0\Accentuate.pdb
+C:\Git\C#\Accentuate\obj\Debug\net6.0\Accentuate.genruntimeconfig.cache
+C:\Git\C#\Accentuate\obj\Debug\net6.0\ref\Accentuate.dll
