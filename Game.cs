@@ -171,27 +171,52 @@ namespace Accentuate
             return 0;
         }
 
+        private int SingleNoTeams(int round)
+        {
+            Quote roundQuote = _quoteList.quoteList[_random.Next(0, quoteRange)];
+            string roundAccent = _accents.accents[_random.Next(0, accentRange)];
+
+            Console.WriteLine(_stringRepository.RoundText(roundQuote.quote, roundQuote.film, roundQuote.releaseYear, roundAccent));
+
+            return 0;
+        }
+
         private bool PlayRound(int round) {
             Console.WriteLine($"\nRound {round.ToString()}\n");
-            int n = playWithTeams ? teamList.Count : 1;
 
-            for (int i = 1; i <= n; i ++)
+            if (playWithTeams)
             {
-                int score = Single(round, teamList[i - 1].teamName);
-                teamList[i - 1].score += score;
+                int n = playWithTeams ? teamList.Count : 1;
+
+                for (int i = 1; i <= n; i ++)
+                {
+                    int score = Single(round, teamList[i - 1].teamName);
+                    teamList[i - 1].score += score;
+                }
+                
+                Console.WriteLine(_stringRepository.ContinueOrScoreBoard);
+                string response = Console.ReadLine() ?? "";
+                if (response == "s" || response == "S")
+                {
+                    var scoreBoard = new ScoreBoard(teamList);
+                    scoreBoard.WriteScoreBoard();
+                    Console.WriteLine($"\n\n");
+                    Console.WriteLine(_stringRepository.Continue);
+                    response = Console.ReadLine() ?? "";
+                }
+                return !(response == "x" || response == "X");
             }
-            
-            Console.WriteLine(_stringRepository.ContinueOrScoreBoard);
-            string response = Console.ReadLine() ?? "";
-            if (response == "s" || response == "S")
+            else
             {
-                var scoreBoard = new ScoreBoard(teamList);
-                scoreBoard.WriteScoreBoard();
-                Console.WriteLine($"\n\n");
+                int score = SingleNoTeams(round);
+                string response;
                 Console.WriteLine(_stringRepository.Continue);
                 response = Console.ReadLine() ?? "";
+                
+                return !(response == "x" || response == "X");
             }
-            return !(response == "x" || response == "X");
+
+            
         }
 
         private void ScoreBoard()
